@@ -41,9 +41,12 @@ ul {
   list-style: none;
 }
 
-a {
+a:link {
   text-decoration: none;
+  color: #017bd3;
 }
+
+
 
 img {
   max-width: 100%;
@@ -74,9 +77,33 @@ h4 {
 
 .header {
   min-height: 100vh;
-  background: url("./images/Banner1.jpg") center/cover no-repeat fixed;
+  
+  
   position: relative;
-  z-index: 100;
+  z-index: 1;
+}
+
+/* Add some basic styles for the transition */
+.hero__content.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+}
+
+.transition-span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+.transition-span.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -113,7 +140,7 @@ h4 {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-}
+}r
 
 .close:hover,
 .close:focus {
@@ -124,15 +151,17 @@ h4 {
 
 /* */
 
-.header::after {
+.header::before {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: url(images/Banner1.jpg);
+  background-size: cover;
   z-index: -1;
+  
 }
 
 /* =========== Header ============ */
@@ -206,7 +235,7 @@ h4 {
 .nav__item .nav__link:visited {
   display: inline-block;
   padding: 1rem;
-  color: var(--grey-color);
+  color: var(--white);
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.4rem;
@@ -440,8 +469,8 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 70;
+    
+    z-index: 1;
   }
 }
 
@@ -458,7 +487,7 @@ h4 {
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
-  color: var(--grey-color);
+  color: black;
 }
 
 .navigation.fix__nav .hero .hero__content {
@@ -473,6 +502,7 @@ h4 {
 .hero__content h1 span {
   display: block;
   line-height: 1.2;
+  color: var(--white);
 }
 
 .hero__content h1 span.color {
@@ -480,10 +510,20 @@ h4 {
   color: var(--default-color);
 }
 
+.snipcart-total-price, .snipcart-summary
+{
+  color: var(--default-color);
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+
+
+
 .btn-hero:link,
 .btn-hero:visited {
   display: inline-block;
-  color: var(--grey-color);
+  color: var(--white);
   padding: 1rem 4rem;
   border: 2px solid var(--default-color);
   border-radius: 4rem;
@@ -626,7 +666,13 @@ h4 {
 }
 
 .product:hover .img__container img {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  
+}
+
+.product:hover{
+  background-color: #c9e8fa;
+  transition: all 0.1s ease-in-out;
 }
 
 .rating svg {
@@ -654,6 +700,15 @@ h4 {
   font-weight: 500;
   cursor: pointer;
   
+}
+
+
+.snipcart-add-item:hover{
+
+  background-color: var(--dark-color-alt);
+  transition: all 0.3s ease-in-out;
+  
+
 }
 
 @media only screen and (max-width: 567px) {
@@ -764,9 +819,17 @@ h4 {
   outline: none;
 }
 
-.cart__details .btn__group button:first-child:hover {
+
+.cart__details .btn__group button:first-child {
   border-color: var(--default-color);
   background-color: var(--default-color);
+  color: var(--grey-color);
+}
+
+
+.cart__details .btn__group button:first-child:hover {
+  border-color: var(--dark-color);
+  background-color: var(--dark-color);
   color: var(--grey-color);
 }
 
@@ -786,12 +849,12 @@ h4 {
   border-radius: 0;
   border: 1px solid var(--grey-color-alt);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(255, 255, 255);
 }
 
 .glide__bullet:hover {
-  border: 1px solid var(--grey-color-alt);
-  background-color: transparent;
+  border: 1px solid #d1ecff;
+  background-color: #d1ecff;
 }
 
 .glide__bullet:focus {
@@ -802,6 +865,7 @@ h4 {
 .thumbnail {
   width: 25rem;
   height: 13rem;
+  
 }
 
 .thumbnail img {
@@ -809,8 +873,8 @@ h4 {
 }
 
 .glide__arrow {
-  background-color: transparent;
-  color: var(--grey-color-alt);
+  
+  background-color: #003b63;
   text-shadow: 0 0 0 rgba(0, 0, 0, 0);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   box-shadow: 0;
@@ -829,6 +893,7 @@ h4 {
 
 .glide__arrow:hover {
   border: 1px solid var(--grey-color-alt);
+  background-color: #42a6fd;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -963,10 +1028,15 @@ h4 {
   text-align: center;
 }
 
+
+
+
 .offer__container h1 {
   letter-spacing: 1.5px;
   font-size: 6rem;
 }
+
+
 
 .offer__container p {
   font-size: 1.8rem;
@@ -974,12 +1044,26 @@ h4 {
   margin-bottom: 2rem;
 }
 
+
+
+
+
 .offer__container a {
   display: inline-block;
   padding: 1rem 3rem;
   color: var(--grey-color);
   font-weight: 800;
   background-color: var(--default-color);
+}
+
+
+
+
+
+.offer__container a:hover {
+  color: var(--dark-color);
+  background-color: var(--white);
+  transition: all .5s ease-in-out;
 }
 
 @media only screen and (max-width: 996px) {

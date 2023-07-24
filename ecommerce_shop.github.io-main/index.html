@@ -21,6 +21,7 @@
 <body>
   
   
+  
   <!-- 
         ========================
         Header
@@ -45,7 +46,7 @@
             </div>
           </div>
 
-          <div class="nav__menu">
+          <div class="nav__menu" >
             <div class="menu__top">
               <h1 class="nav__category"><a href="#header"> Avraham's <span>Shop</span></a></h1>
               <div class="close__toggle">
@@ -72,24 +73,32 @@
               </li>
 
               <li class="nav__item">
-                <a href="#"  class="nav__link scroll-link" onclick="openLoginForm()">Login</a>
+                <a href="#" class="nav__link scroll-link" onclick="openLoginForm()">Login</a>
               </li>
 
               <li class="nav__item">
                 <a href="#"  class="nav__link scroll-link" onclick="openRegisterForm()">Register</a>
               </li>
 
+              <div class="snipcart-summary">
+               
+                TOTAL PRICE: <span class="snipcart-total-price"></span>
+            </div>
+            <a href="#" class="snipcart-user-profile">
+             
+            </a>
 
              
 
               <li class="nav__item">
               <!--<span class="snipcart-items-count"></span>-->
               <div  class="nav__link">
+               
                 
               
-              <a href="#" class="snipcart-checkout">Cart = </a>
-              <span class="snipcart-items-count"></span>
-            
+              <a href="#" class="snipcart-checkout"  >CART = <span class="snipcart-items-count"></span> </a>
+              
+           
             </li>
           </div>
               
@@ -140,6 +149,8 @@
     </div>
   </div>
 
+  
+
   <!-- Register Form Modal -->
   <div id="registerModal" class="modal">
     <div class="modal-content">
@@ -159,11 +170,12 @@
     <div class="hero">
       <div class="hero__content container">
         <h1>
-          <span>The <span class="color">Hottest</span> tech of the market,</span>
-          <span>Welcome. <span class="color">Avraham's Shop</span> ,the best deals.</span>
+          <span class="transition-span">The <span class="color">Hottest</span> tech of the market,</span>
+          <span class="transition-span">Welcome. <span class="color">Avraham's Shop</span> ,the best deals.</span>
         </h1>
         <a href="#featured" class="btn btn-hero">shop now</a>
       </div>
+      
 
       <a href="#new__arrival" class="goto__next scroll-link">
         <span>
@@ -182,6 +194,8 @@
 </body>
 
 </html>
+
+
 
   <!-- Main -->
   <main>
@@ -203,6 +217,8 @@
               <h3>PRODUCT NAME 5</h3>
              
             </div>
+
+            <div class="price">500$</div>
             
            
             <button class="snipcart-add-item"
@@ -226,6 +242,8 @@
               <h3>PRODUCT NAME 4</h3>
               
             </div>
+
+            <div class="price">400$</div>
             
             
             <button class="snipcart-add-item"
@@ -249,6 +267,8 @@
               <h3>PRODUCT NAME 3</h3>
               
             </div>
+
+            <div class="price">300$</div>
             
             
             <button class="snipcart-add-item"
@@ -272,11 +292,13 @@
               <h3>PRODUCT NAME 9</h3>
               
             </div>
+
+            <div class="price">900$</div>
             
             
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 9"
-            data-item-price="300"
+            data-item-price="900"
             data-item-url="./images/pic7.png"
             data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
             data-item-image="./images/pic7.png"
@@ -502,7 +524,7 @@
               <h3>PRODUCT NAME 1</h3>
               
             </div>
-            <div class="price">100 ILS</div>
+            <div class="price">100$</div>
            
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 1"
@@ -528,7 +550,7 @@
               <h3>PRODUCT NAME 2</h3>
              
             </div>
-            <div class="price">200 ILS</div>
+            <div class="price">200$</div>
             
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 2"
@@ -551,7 +573,7 @@
               <h3>PRODUCT NAME 3</h3>
               
             </div>
-            <div class="price">300 ILS</div>
+            <div class="price">300$</div>
             
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 3"
@@ -574,7 +596,7 @@
               <h3>PRODUCT NAME 4</h3>
               
             </div>
-            <div class="price">400 ILS</div>
+            <div class="price">400$</div>
             
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 4"
@@ -597,7 +619,7 @@
               <h3>PRODUCT NAME 5</h3>
              
             </div>
-            <div class="price">500 ILS</div>
+            <div class="price">500$</div>
            
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 5"
@@ -620,7 +642,7 @@
               <h3>PRODUCT NAME 6</h3>
               
             </div>
-            <div class="price">600 ILS</div>
+            <div class="price">600$</div>
             
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 6"
@@ -644,7 +666,7 @@
               
              
             </div>
-            <div class="price">700 ILS</div>
+            <div class="price">700$</div>
             
             <button class="snipcart-add-item"
             data-item-id="PRODUCT NAME 7"
@@ -673,7 +695,7 @@
               
               
             </div>
-            <div class="price">800 ILS</div>
+            <div class="price">800$</div>
             
             <button class="snipcart-add-item"
 data-item-id="PRODUCT NAME 8"
@@ -835,6 +857,7 @@ Add to cart
   </main>
 
 
+
   <script>
      let cartItemsCount = 0;
   let cartItems = {};
@@ -919,6 +942,37 @@ Add to cart
 
   </script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Add class "visible" to each span with the class "transition-span" after a delay
+  $('.transition-span').each(function(index) {
+    var $span = $(this);
+    setTimeout(function() {
+      $span.addClass('visible');
+    }, (index + 1) * 500); // Adjust the delay as needed (1000ms = 1s)
+  });
+});
+</script>
+
+
+
+
+  <script>
+
+window.addEventListener('scroll', function() {
+  const content = document.querySelector('.content');
+  const offset = content.getBoundingClientRect().top;
+
+  // Change the background to black when scrolling down 100 pixels
+  if (offset < -100) {
+    document.body.classList.add('black-background');
+  } else {
+    document.body.classList.remove('black-background');
+  }
+});
+
+</script>
 
 
 <script>
@@ -967,6 +1021,7 @@ function closeRegisterForm() {
   document.getElementById("registerModal").style.display = "none";
 }
 </script>
+
 
 
 
