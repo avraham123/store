@@ -41,9 +41,9 @@ ul {
   list-style: none;
 }
 
-a:link {
+a {
   text-decoration: none;
-  color: #017bd3;
+  color: #008bee;
 }
 
 
@@ -158,10 +158,37 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(images/Banner1.jpg);
+  background: url(images/video.mp4);
   background-size: cover;
   z-index: -1;
   
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire header area */
+  z-index: -1; /* Place the video behind other header content */
+}
+
+.featured{
+  background-color: #eaf7ff;
+}
+
+.new__arrival{
+  background-color: #eaf7ff;
+}
+
+.cart__slide{
+  background-color: #eaf7ff;
+}
+
+
+.blog{
+  background-color: #eaf7ff;
 }
 
 /* =========== Header ============ */
@@ -257,11 +284,15 @@ h1 {
 }
 
 .nav__menu .nav__item:last-child .nav__link {
-  background-color: var(--default-color);
+  background-color: #003f69;
   padding: 0.8rem 3rem;
   border-radius: 10rem;
   border: 1px solid var(--default-color);
   transition: all 300ms ease-in-out;
+}
+
+.snipcart-checkout{
+  color: white;
 }
 
 .nav__menu .nav__item:last-child .nav__link:hover {
@@ -425,7 +456,7 @@ h1 {
     justify-content: space-between;
     padding: 2rem 1rem;
     width: 100%;
-    background-color: var(--default-color);
+    background-color: #003f69;
   }
 
   .nav__menu .nav__list {
@@ -512,12 +543,48 @@ h1 {
 
 .snipcart-total-price, .snipcart-summary
 {
-  color: var(--default-color);
+  color: #1ca4ff;
   margin-top: 8px;
   margin-right: 8px;
+  font-weight: bold ;
+}
+
+.snipcart-cart-header{
+  background-color: #b2e0ff;
+}
+.snipcart-item-list .snipcart-scrollbar .snipcart-item-list--no-shadow{
+  background-color: #b2e0ff;
+
+}
+.snipcart-cart__content{
+  background-color: #b2e0ff;
+
+}
+
+.snipcart-form__select{
+  background-color: #f8fcff;
+
+}
+
+.snipcart-item-quantity__quantity{
+  background-color: #f8fcff;
+
 }
 
 
+
+
+.snipcart-modal{
+  background-color: #b2e0ff;
+}
+
+.snipcart-item-line__container{
+  background-color: #b2e0ff;
+}
+
+.snipcart-item-line{
+  background-color: #b2e0ff;
+}
 
 
 .btn-hero:link,
@@ -962,6 +1029,7 @@ h1 {
     height: 35rem;
   }
 
+
   .cart__details h1 {
     font-size: 4rem;
   }
@@ -990,6 +1058,8 @@ h1 {
     padding-bottom: 3rem;
   }
 
+
+  
   .glide__bullet {
     display: none;
   }
@@ -1005,8 +1075,7 @@ h1 {
 .special__offer {
   position: relative;
   height: 40rem;
-  background: 
-    url("./images/Banner1.jpg") top/cover no-repeat fixed;
+  background-color: #003f69;
 }
 
 .special__offer::before {
@@ -1016,7 +1085,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  
 }
 
 .offer__container {
@@ -1103,6 +1172,7 @@ h1 {
   .special__offer {
     height: 25rem;
   }
+  
 
   .offer__container h1 {
     font-size: 2.5rem;
@@ -1134,6 +1204,14 @@ h1 {
   .featured__center {
     grid-template-columns: 1fr 1fr;
   }
+
+   .snipcart-summary{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: large;
+  }
+
+
 }
 
 
@@ -1269,7 +1347,10 @@ h1 {
 
 /* ============ Newsletter ============= */
 .newsletter {
-  background-color: rgba(0, 0, 0, 0.1);
+  
+
+  background-color: #eaf7ff;
+
 }
 
 .newsletter__center {
@@ -1346,7 +1427,7 @@ h1 {
 /* ============ Footer ============ */
 
 .footer {
-  background-color: var(--dark-color);
+  background-color: #003f69;
   padding: 6rem 1rem;
   line-height: 3rem;
 }

@@ -28,6 +28,15 @@
         ========================
      -->
   <header id="header" class="header">
+
+    <video id="video-background" autoplay loop muted>
+      <source src="images/video.mp4" type="video/mp4">
+      <!-- Include additional video sources here if needed for cross-browser compatibility -->
+      <!-- <source src="your-video-file.webm" type="video/webm"> -->
+      <!-- <source src="your-video-file.ogg" type="video/ogg"> -->
+      Your browser does not support the video tag.
+  </video>
+
     <!-- Navigation -->
     <div class="navigation">
       <div class="container">
@@ -61,6 +70,10 @@
               </li>
 
               <li class="nav__item">
+                <a href="#new__arrival" class="nav__link scroll-link">new arrival</a>
+              </li>
+
+              <li class="nav__item">
                 <a href="#featured" class="nav__link scroll-link">Featured</a>
               </li>
 
@@ -71,7 +84,7 @@
               <li class="nav__item">
                 <a href="#newsletter" class="nav__link scroll-link">Subscribe</a>
               </li>
-
+ <!--
               <li class="nav__item">
                 <a href="#" class="nav__link scroll-link" onclick="openLoginForm()">Login</a>
               </li>
@@ -79,7 +92,7 @@
               <li class="nav__item">
                 <a href="#"  class="nav__link scroll-link" onclick="openRegisterForm()">Register</a>
               </li>
-
+-->
               <div class="snipcart-summary">
                
                 TOTAL PRICE: <span class="snipcart-total-price"></span>
@@ -313,7 +326,7 @@
     </section>
 
     <!-- Cart Slide -->
-    <section class="cart__slide">
+    <section class="cart__slide" id="cart__slide">
       <div class="arrival__slide container">
         <div class="glide" id="glide1">
           <div class="glide__track" data-glide-el="track">
