@@ -1,0 +1,102 @@
+:root {
+    --default-color: #42a6fd;
+    --default-color2: #459ad6;
+    --dark-color: #222;
+    --dark-color-alt: #3c4858;
+    --grey-color: #f9fafd;
+    --grey-color-alt: #8492a6;
+    --yellow: #00fbff;
+    --white: #fff;
+  }
+  
+  /* Rest of the CSS styles */
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    background-color: #42a6fd;
+  }
+  
+  body {
+    position: relative;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--white);
+  }
+  
+  li,
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--default-color2);
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+  }
+  
+  .container {
+    max-width: 80rem; /* Reduce the width to make the text less wide */
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  
+  @media only screen and (max-width: 992px) {
+    .container {
+      padding: 0 3rem;
+    }
+  }
+  
+  .header {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-color: #d6feff;
+  }
+  
+  .hero__content.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    position: relative;
+  }
+  
+  .transition-span {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .transition-span.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Update colors for the paragraphs */
+  .container p {
+    color: var(--dark-color-alt);
+  }
+  
+  /* Style the strong words in bold */
+  .container p strong {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Avraham's Shop</title>
+  <link rel="stylesheet" href="aboutmecss.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="hero__content container">
+      <h1>
+        Welcome to <span class="transition-span"><strong>Avraham's Shop</strong></span>
+      </h1>
+      <h2>About Us</h2>
+      <p class="transition-span">As the proud owner of this tech haven, I am delighted to provide you with an exceptional
+        shopping experience that blends cutting-edge technology with unparalleled <strong>customer service</strong>. At Avraham's Shop, we
+        offer a diverse range of products, from state-of-the-art <strong>computers</strong> to the latest <strong>smartphones</strong> and top-of-the-line
+        <strong>headphones</strong>.</p>
+      <p class="transition-span"><strong>Our mission</strong> is to ensure that you receive nothing but <strong>the best</strong>, which is why we take great
+        pride in curating a selection of high-quality products from trusted brands. Each item in our inventory undergoes
+        rigorous testing to guarantee that it meets our stringent standards of excellence.</p>
+      <p class="transition-span">But it's not just about the products – at Avraham's Shop, we believe that excellent <strong>customer
+          service</strong> is at the heart of any successful business. Our team of knowledgeable and friendly experts is always ready
+        to assist you in finding the perfect tech solutions tailored to your needs. Whether you're a tech enthusiast seeking
+        the latest <strong>gadget</strong> or a first-time buyer in need of guidance, we are here to offer personalized recommendations and
+        expert advice.</p>
+      <p class="transition-span">We understand the value of your time and money, and that's why we are committed to providing
+        competitive prices without compromising on the quality of our products or <strong>service</strong>. Your satisfaction is our utmost
+        priority, and we continuously strive to exceed your expectations in every aspect of your shopping journey.</p>
+      <p class="transition-span">At Avraham's Shop, it's not just a <strong>transaction</strong>; it's a partnership built on <strong>trust,
+        reliability, and excellence.</strong> Join us today, and let us take you on a remarkable tech journey like no other. Thank
+        you for choosing Avraham's Shop – where great <strong>service</strong>, top-notch quality, and exceptional <strong>customer care</strong> are always
+        guaranteed.</p>
+    </div>
+  </header>
+
+  <script>
+    // Simple JavaScript to add the 'visible' class and trigger the transition effect
+    document.addEventListener("DOMContentLoaded", function () {
+      const transitionSpans = document.querySelectorAll(".transition-span");
+      transitionSpans.forEach(function (span, index) {
+        setTimeout(function () {
+          span.classList.add("visible");
+        }, index * 500);
+      });
+    });
+  </script>
+</body>
+
+</html>

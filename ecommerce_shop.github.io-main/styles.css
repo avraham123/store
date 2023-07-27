@@ -106,6 +106,14 @@ h1 {
   transform: translateY(0);
 }
 
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info span {
+  margin-right: 0.5rem; /* Adjust this value to add space between the icon and the phone number */
+}
 
  /* Styles for the login and registration forms */
  .modal {
@@ -293,6 +301,9 @@ h1 {
 
 .snipcart-checkout{
   color: white;
+  font-weight: bold;
+  font-size: large;
+
 }
 
 .nav__menu .nav__item:last-child .nav__link:hover {
@@ -1367,8 +1378,12 @@ h1 {
   align-items: center;
 }
 
+.subdeals{
+  font-size: 14px;
+}
+
 .newsletter__box form input {
-  width: 70%;
+  width: 60%;
   padding: 1.5rem 0;
   text-indent: 1rem;
   border: 1px solid var(--dark-color-alt);
