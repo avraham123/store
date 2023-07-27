@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Glidejs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>SHOP</title>
+</head>
+
+<body>
+  
+  
+  
+  <!-- 
+        ========================
+        Header
+        ========================
+     -->
+  <header id="header" class="header">
+
+    <video id="video-background" autoplay loop muted>
+      <source src="images/video.mp4" type="video/mp4">
+      <!-- Include additional video sources here if needed for cross-browser compatibility -->
+      <!-- <source src="your-video-file.webm" type="video/webm"> -->
+      <!-- <source src="your-video-file.ogg" type="video/ogg"> -->
+      Your browser does not support the video tag.
+  </video>
+
+    <!-- Navigation -->
+    <div class="navigation">
+      <div class="container">
+        <nav class="nav__center">
+          <div class="nav__header">
+            <div class="nav__logo">
+              <h1><a href="#header"> Avraham's <span>Shop</span></a></h1>
+            </div>
+
+            <div class="nav__hamburger">
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="nav__menu" >
+            <div class="menu__top">
+              <h1 class="nav__category"><a href="#header"> Avraham's <span>Shop</span></a></h1>
+              <div class="close__toggle">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+              </div>
+            </div>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#header" class="nav__link scroll-link">Home</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#new__arrival" class="nav__link scroll-link">new arrival</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#featured" class="nav__link scroll-link">Featured</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#blog" class="nav__link scroll-link">Blog</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#newsletter" class="nav__link scroll-link">Subscribe</a>
+              </li>
+ <!--
+              <li class="nav__item">
+                <a href="#" class="nav__link scroll-link" onclick="openLoginForm()">Login</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#"  class="nav__link scroll-link" onclick="openRegisterForm()">Register</a>
+              </li>
+-->
+              <div class="snipcart-summary">
+               
+                TOTAL PRICE: <span class="snipcart-total-price"></span>
+            </div>
+            <a href="#" class="snipcart-user-profile">
+             
+            </a>
+
+             
+
+              <li class="nav__item">
+              <!--<span class="snipcart-items-count"></span>-->
+                <div class="nav__link">
+               <div class="snipcart-checkout">
+                
+              
+              <a href="#" class="snipcart-checkout"  >CART = <span class="snipcart-items-count"></span> </a>
+              
+            </div>
+            </li>
+          </div>
+              
+
+
+              
+            </ul>
+
+            
+
+
+             
+
+
+              
+<!--
+              <div id="cart" class="cart">
+                <span class="cart__icon">🛒</span>
+                <span id="cartCount" class="cart__count">0</span>
+              </div>
+            </ul>
+
+            <div id="cartSidebar" class="cart-sidebar">
+              <div class="cart-sidebar__header">
+                <h2>Your Cart</h2>
+                <span class="close-icon" onclick="toggleCart()">✕</span>
+              </div>
+              <ul id="cartItems" class="cart-items"></ul>
+            </div>
+ -->
+        </nav>
+      </div>
+     
+    </div>
+
+    <!-- Login Form Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginForm()">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Continue">
+      </form>
+    </div>
+  </div>
+
+  
+
+  <!-- Register Form Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegisterForm()">&times;</span>
+      <h2>Register</h2>
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Register">
+      </form>
+    </div>
+  </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero__content container">
+        <h1>
+          <span class="transition-span">The <span class="color">Hottest</span> tech of the market,</span>
+          <span class="transition-span">Welcome. <span class="color">Avraham's Shop</span> ,the best deals.</span>
+        </h1>
+        <a href="#featured" class="btn btn-hero">shop now</a>
+      </div>
+      
+
+      <a href="#new__arrival" class="goto__next scroll-link">
+        <span>
+          <svg>
+            <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+   
+  </header>
+
+
+
+</body>
+
+</html>
+
+
+
+  <!-- Main -->
+  <main>
+    <!-- New Arrival -->
+    <section class="section new__arrival" id="new__arrival">
+      <div class="arrivals container">
+        <div class="title">
+          <h1 class="primary__title">New Arrival</h1>
+        </div>
+
+        <div class="arrival__center">
+        
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic1.png" alt="" />
+            </div>
+            <div class="product__bottom">
+              
+              <h3>PRODUCT NAME 5</h3>
+             
+            </div>
+
+            <div class="price">500$</div>
+            
+           
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 5"
+            data-item-price="500"
+            data-item-url="./images/pic1.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic1.png"
+            data-item-name="PRODUCT NAME 5"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic2.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 4</h3>
+              
+            </div>
+
+            <div class="price">400$</div>
+            
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 4"
+            data-item-price="400"
+            data-item-url="./images/pic2.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic2.png"
+            data-item-name="PRODUCT NAME 4"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic3.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 3</h3>
+              
+            </div>
+
+            <div class="price">300$</div>
+            
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 3"
+            data-item-price="300"
+            data-item-url="./images/pic3.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic3.png"
+            data-item-name="PRODUCT NAME 3"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic7.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 9</h3>
+              
+            </div>
+
+            <div class="price">900$</div>
+            
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 9"
+            data-item-price="900"
+            data-item-url="./images/pic7.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic7.png"
+            data-item-name="PRODUCT NAME 9"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Slide -->
+    <section class="cart__slide" id="cart__slide">
+      <div class="arrival__slide container">
+        <div class="glide" id="glide1">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="./images/pic7.png" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>PRODUCT NAME 9</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque eius, laborum sunt dolorem
+                        necessitatibus incidunt aut ducimus, quis, veritatis
+                        cum dolore tempora? Corporis, nostrum alias.
+                      </p>
+                     
+                      
+                      <div class="btn__group">
+                        <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 9"
+            data-item-price="900"
+            data-item-url="./images/pic7.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic7.png"
+            data-item-name="PRODUCT NAME 9"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="./images/pic8.png" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>PRODUCT NAME 8</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque eius, laborum sunt dolorem
+                        necessitatibus incidunt aut ducimus, quis, veritatis
+                        cum dolore tempora? Corporis, nostrum alias.
+                      </p>
+                      
+                     
+                      <div class="btn__group">
+                        <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 8"
+            data-item-price="800"
+            data-item-url="./images/pic8.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic8.png"
+            data-item-name="PRODUCT NAME 8"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="./images/pic9.png" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>PRODUCT NAME 7</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque eius, laborum sunt dolorem
+                        necessitatibus incidunt aut ducimus, quis, veritatis
+                        cum dolore tempora? Corporis, nostrum alias.
+                      </p>
+                     
+                     
+                     
+                      <div class="btn__group">
+                        <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 7"
+            data-item-price="900"
+            data-item-url="./images/pic9.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic9.png"
+            data-item-name="PRODUCT NAME 7"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="arrival">
+                  <div class="cart__like">
+                    <div class="image__holder">
+                      <img src="./images/pic3.png" alt="" />
+                    </div>
+                    <div class="cart__details">
+                      <h1>PRODUCT NAME 3</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Doloremque eius, laborum sunt dolorem
+                        necessitatibus incidunt aut ducimus, quis, veritatis
+                        cum dolore tempora? Corporis, nostrum alias.
+                      </p>
+                      
+                      
+                      <div class="btn__group">
+                        <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 3"
+            data-item-price="300"
+            data-item-url="./images/pic3.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic3.png"
+            data-item-name="PRODUCT NAME 3"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Arrows -->
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+              prev
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+              next
+            </button>
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0">
+              <div class="thumbnail">
+                <img src="./images/pic7.png" alt="" />
+              </div>
+            </button>
+
+            <button class="glide__bullet" data-glide-dir="=1">
+              <div class="thumbnail">
+                <img src="./images/pic8.png" alt="" />
+              </div>
+            </button>
+
+            <button class="glide__bullet" data-glide-dir="=2">
+              <div class="thumbnail">
+                <img src="./images/pic9.png" alt="" />
+              </div>
+            </button>
+
+            <button class="glide__bullet" data-glide-dir="=3">
+              <div class="thumbnail">
+                <img src="./images/pic3.png" alt="" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="section special__offer">
+      <div class="offer__container">
+        <h1>SPECIAL OFFER</h1>
+        <p>Special Offer Discount valid for Only this Week</p>
+        <a href="#featured">SHOP NOW</a>
+      </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="section featured" id="featured">
+      <div class="featured__container container">
+        <div class="title">
+          <h1 class="primary__title">Featured Products</h1>
+        </div>
+
+        <div class="featured__center">
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic5.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 1</h3>
+              
+            </div>
+            <div class="price">100$</div>
+           
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 1"
+            data-item-price="100"
+            data-item-url="./images/pic5.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic5.png"
+            data-item-name="PRODUCT NAME 1"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+
+           
+
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic4.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 2</h3>
+             
+            </div>
+            <div class="price">200$</div>
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 2"
+            data-item-price="200"
+            data-item-url="./images/pic4.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic4.png"
+            data-item-name="PRODUCT NAME 2"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic3.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 3</h3>
+              
+            </div>
+            <div class="price">300$</div>
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 3"
+            data-item-price="300"
+            data-item-url="./images/pic3.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic3.png"
+            data-item-name="PRODUCT NAME 3"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic2.png" alt="" />
+            </div>
+            <div class="product__bottom">
+             
+              <h3>PRODUCT NAME 4</h3>
+              
+            </div>
+            <div class="price">400$</div>
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 4"
+            data-item-price="400"
+            data-item-url="./images/pic2.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic2.png"
+            data-item-name="PRODUCT NAME 4"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic1.png" alt="" />
+            </div>
+            <div class="product__bottom">
+              
+              <h3>PRODUCT NAME 5</h3>
+             
+            </div>
+            <div class="price">500$</div>
+           
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 5"
+            data-item-price="500"
+            data-item-url="./images/pic1.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic1.png"
+            data-item-name="PRODUCT NAME 5"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic10.png" alt="" />
+            </div>
+            <div class="product__bottom">
+              
+              <h3>PRODUCT NAME 6</h3>
+              
+            </div>
+            <div class="price">600$</div>
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 6"
+            data-item-price="600"
+            data-item-url="./images/pic10.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic10.png"
+            data-item-name="PRODUCT NAME 6"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic9.png" alt="" />
+            </div>
+            <div class="product__bottom">
+              
+              <h3>PRODUCT NAME 7</h3>
+              
+             
+            </div>
+            <div class="price">700$</div>
+            
+            <button class="snipcart-add-item"
+            data-item-id="PRODUCT NAME 7"
+            data-item-price="700"
+            data-item-url="./images/pic9.png"
+            data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+            data-item-image="./images/pic9.png"
+            data-item-name="PRODUCT NAME 7"
+            data-item-custom1-name="Frame color"
+            data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+            Add to cart
+            </button>
+          </div>
+          <div class="product">
+            <div class="img__container">
+              <img src="./images/pic8.png" alt="" />
+            </div>
+
+
+            
+            <div class="product__bottom">
+             
+              
+              <h3>PRODUCT NAME 8</h3>
+             
+              
+              
+            </div>
+            <div class="price">800$</div>
+            
+            <button class="snipcart-add-item"
+data-item-id="PRODUCT NAME 8"
+data-item-price="800"
+data-item-url="./images/pic8.png"
+data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+data-item-image="./images/pic8.png"
+data-item-name="PRODUCT NAME 8"
+data-item-custom1-name="Frame color"
+data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+Add to cart
+</button>
+          </div>
+        </div>
+      </div>
+
+      
+<!-- ניסיון
+
+<button class="snipcart-add-item"
+data-item-id="PRODUCT NAME 8"
+data-item-price="79.99"
+data-item-url="./images/pic8.png"
+data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+data-item-image="./images/pic8.png"
+data-item-name="PRODUCT NAME 8"
+data-item-custom1-name="Frame color"
+data-item-custom1-options="Black|Brown[+100.00]|Gold[+300.00]">
+Add to cart
+</button>
+
+
+
+
+ עד לפה ניסיון -->
+
+    </section>
+
+    <!-- Blog -->
+    <section class="section blog" id="blog">
+      <div class="blog__container container">
+        <div class="title">
+          <h1 class="primary__title">Latest News</h1>
+        </div>
+
+        <div class="blog__center">
+          <div class="blog__box">
+            <div class="img__cover">
+              <img src="./images/blog1.jpg" alt="" />
+            </div>
+            <div class="box__content">
+              <h2>Here are the trends I see coming this fall</h2>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+
+          <div class="blog__box">
+            <div class="img__cover">
+              <img src="./images/blog2.jpg" alt="" />
+            </div>
+            <div class="box__content">
+              <h2>Here are the trends I see coming this fall</h2>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+
+          <div class="blog__box">
+            <div class="img__cover">
+              <img src="./images/blog3.jpg" alt="" />
+            </div>
+            <div class="box__content">
+              <h2>Here are the trends I see coming this fall</h2>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter" id="newsletter">
+      <div class="newsletter__container container">
+        <div class="title">
+          <h1 class="primary__title">Newsletter</h1>
+        </div>
+
+        <div class="newsletter__center">
+          <div class="newsletter__box">
+            <h2>Newsletter</h2>
+            <p>
+              Subscribe to our newsletter and get 20% off your first purchase
+            </p>
+          </div>
+
+          <div class="newsletter__box">
+            <form action="#">
+              <input type="email" placeholder="Your email" />
+              <button>SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+      <div class="container">
+        <div class="footer__top">
+          
+          <div class="footer-top__box">
+            <h3>INFORMATION</h3>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Site Map</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>MY ACCOUNT</h3>
+            <a href="#">My Account</a>
+            <a href="#">Order History</a>
+            
+            <a href="#">Newsletter</a>
+            <a href="#">Returns</a>
+          </div>
+          <div class="footer-top__box">
+            <h3>CONTACT US</h3>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-location"></use>
+                </svg>
+              </span>
+               Eli Cohen 39, Ashkelon, ISL
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+                </svg>
+              </span>
+            avraham.life2000@gmail.com
+            </div>
+            <div>
+              <span>
+                <svg>
+                  <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+              053-432-3378
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </main>
+
+
+
+  <script>
+     let cartItemsCount = 0;
+  let cartItems = {};
+
+  function addToCart(productIndex) {
+    cartItemsCount++;
+    document.getElementById("cartCount").textContent = cartItemsCount;
+    addProductToCart(productIndex);
+  }
+
+  function addProductToCart(productIndex) {
+    const productName = "PRODUCT NAME " + (productIndex + 1);
+    if (cartItems[productName]) {
+      cartItems[productName]++;
+      const listItem = document.getElementById(productName);
+      const quantitySpan = listItem.querySelector(".quantity");
+      quantitySpan.textContent = cartItems[productName];
+    } else {
+      cartItems[productName] = 1;
+      const cartItemsList = document.getElementById("cartItems");
+      const listItem = document.createElement("li");
+      listItem.id = productName;
+
+      const productNameSpan = document.createElement("span");
+      productNameSpan.textContent = productName;
+
+      const productImage = document.createElement("img");
+      productImage.src = `./images/pic${productIndex + 1}.jpg`;
+      productImage.alt = productName;
+
+      const minusButton = document.createElement("button");
+      minusButton.textContent = "-";
+      minusButton.classList.add("quantity-button");
+      minusButton.addEventListener("click", () => decreaseQuantity(productName));
+
+      const plusButton = document.createElement("button");
+      plusButton.textContent = "+";
+      plusButton.classList.add("quantity-button");
+      plusButton.addEventListener("click", () => increaseQuantity(productName));
+
+      const quantitySpan = document.createElement("span");
+      quantitySpan.classList.add("quantity");
+      quantitySpan.textContent = cartItems[productName];
+
+      listItem.appendChild(productImage);
+      listItem.appendChild(productNameSpan);
+      listItem.appendChild(minusButton);
+      listItem.appendChild(quantitySpan);
+      listItem.appendChild(plusButton);
+
+      cartItemsList.appendChild(listItem);
+    }
+  }
+
+  function decreaseQuantity(productName) {
+    if (cartItems[productName] > 0) {
+      cartItems[productName]--;
+      const listItem = document.getElementById(productName);
+      const quantitySpan = listItem.querySelector(".quantity");
+      quantitySpan.textContent =cartItems[productName];
+    }
+  }
+
+  function increaseQuantity(productName) {
+    cartItems[productName]++;
+    const listItem = document.getElementById(productName);
+    const quantitySpan = listItem.querySelector(".quantity");
+    quantitySpan.textContent = cartItems[productName];
+  }
+
+  function toggleCart() {
+    const cartSidebar = document.getElementById("cartSidebar");
+    cartSidebar.classList.toggle("open");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cartIcon = document.querySelector(".cart__icon");
+    cartIcon.addEventListener("click", toggleCart);
+  });
+
+
+
+  </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Add class "visible" to each span with the class "transition-span" after a delay
+  $('.transition-span').each(function(index) {
+    var $span = $(this);
+    setTimeout(function() {
+      $span.addClass('visible');
+    }, (index + 1) * 500); // Adjust the delay as needed (1000ms = 1s)
+  });
+});
+</script>
+
+
+
+
+  <script>
+
+window.addEventListener('scroll', function() {
+  const content = document.querySelector('.content');
+  const offset = content.getBoundingClientRect().top;
+
+  // Change the background to black when scrolling down 100 pixels
+  if (offset < -100) {
+    document.body.classList.add('black-background');
+  } else {
+    document.body.classList.remove('black-background');
+  }
+});
+
+</script>
+
+
+<script>
+  window.SnipcartSettings = {
+    publicApiKey: "NzJhZjlmNjYtMzZkOC00M2JlLWJlMzgtMjVjZDQ0MzZiNTNmNjM4MjQ1OTg5ODM3Mzg1MjQ2",
+    loadStrategy: "on-user-interaction",
+    modalStyle: "side",
+   
+    addProductBehavior: "none",
+  };
+
+  (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+</script>
+
+<script>
+  const button = document.querySelector('#starry-night')
+  const quantity = document.querySelector('#quantity')
+  quantity.addEventListener('change', () => {
+    // Sets the default quantity when adding the item
+    button.setAttribute('data-item-quantity', quantity.value)
+  })
+  const select = document.querySelector('#frame_color')
+  select.addEventListener('change', () => {
+    // Sets the default frame color when adding the item
+    button.setAttribute("data-item-custom1-value", select.value)
+  })
+  </script>
+
+<script>
+
+// Functions to open and close the login form
+function openLoginForm() {
+  document.getElementById("loginModal").style.display = "block";
+}
+
+function closeLoginForm() {
+  document.getElementById("loginModal").style.display = "none";
+}
+
+// Functions to open and close the register form
+function openRegisterForm() {
+  document.getElementById("registerModal").style.display = "block";
+}
+
+function closeRegisterForm() {
+  document.getElementById("registerModal").style.display = "none";
+}
+</script>
+
+
+
+
+
+  <!-- Glidejs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="./js/slider.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
