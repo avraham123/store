@@ -46,6 +46,14 @@
               <h1><a href="#header"> Avraham's <span>Shop</span></a></h1>
             </div>
 
+            <div class="snipcart-checkout">
+            <div class="cart-icon" id="cartIcon">
+             
+                <img src="images/cart-icon.svg" alt="Cart Icon">
+              <span class="snipcart-items-count"></span>
+            </div>
+          </div>
+
             <div class="nav__hamburger">
               <span>
                 <svg>
@@ -101,7 +109,8 @@
              
             </a>
 
-             
+
+           
 
               <li class="nav__item">
               <!--<span class="snipcart-items-count"></span>-->
@@ -948,6 +957,43 @@ Add to cart
       cartItemsList.appendChild(listItem);
     }
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const cartIcon = document.getElementById("cartIcon");
+
+  // Handle click event on cart icon
+  cartIcon.addEventListener("click", function () {
+    // Add a class to change the icon color
+    cartIcon.classList.add("blue-icon");
+
+    // Remove the class after a delay (1 second)
+    setTimeout(function () {
+      cartIcon.classList.remove("blue-icon");
+    }, 1000);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const addToCartButtons = document.querySelectorAll(".snipcart-add-item");
+// Handle click event on "Add to Cart" buttons
+addToCartButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Toggle the "added-to-cart" class on the button
+      button.classList.toggle("added-to-cart");
+
+      // Set a timeout to revert the button color after 2 seconds
+      setTimeout(function () {
+        button.classList.toggle("added-to-cart");
+      }, 2000);
+    });
+  });
+});
+
+
+
+
+
+
 
   function decreaseQuantity(productName) {
     if (cartItems[productName] > 0) {

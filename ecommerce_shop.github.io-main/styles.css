@@ -65,6 +65,8 @@ h4 {
   margin: 0 auto;
 }
 
+
+
 @media only screen and (max-width: 992px) {
   .container {
     padding: 0 3rem;
@@ -416,6 +418,7 @@ h1 {
     width: 3rem;
     height: 3rem;
     fill: var(--dark-color);
+    
   }
 
   .nav__center .nav__logo h1 {
@@ -432,10 +435,15 @@ h1 {
     justify-content: center;
   }
 
+  .snipcart-items-count
+  {
+    color: rgb(91, 170, 255);
+  }
+
   .nav__header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-evenly;
     width: 100%;
   }
 
@@ -561,8 +569,15 @@ h1 {
 }
 
 .snipcart-cart-header{
-  background-color: #b2e0ff;
+  background-color: #ffffff;
 }
+
+
+
+
+
+
+
 .snipcart-item-list .snipcart-scrollbar .snipcart-item-list--no-shadow{
   background-color: #b2e0ff;
 
@@ -581,8 +596,11 @@ h1 {
   background-color: #f8fcff;
 
 }
-
-
+/* Green Button Style */
+.added-to-cart {
+  background-color: green;
+  /* Additional styles for the green button */
+}
 
 
 .snipcart-modal{
@@ -590,7 +608,7 @@ h1 {
 }
 
 .snipcart-item-line__container{
-  background-color: #b2e0ff;
+  background-color: #e9f6ff;
 }
 
 .snipcart-item-line{
@@ -777,13 +795,36 @@ h1 {
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
+  transition: background-color 0.5s; /* Add a transition for smooth color change */
   
 }
+
+/* Green Button Style */
+.added-to-cart {
+  background-color: green;
+  /* Additional styles for the green button */
+}
+
+/* Animation for Fading Back to Default Color */
+@keyframes fadeBack {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: initial; /* Use the default background color */
+  }
+}
+
+/* Apply the animation to the button */
+.add-to-cart-button.fade-back-animation {
+  animation: fadeBack 1.5s forwards; /* Adjust the duration as needed */
+}
+
 
 
 .snipcart-add-item:hover{
 
-  background-color: var(--dark-color-alt);
+ 
   transition: all 0.3s ease-in-out;
   
 
@@ -905,11 +946,6 @@ h1 {
 }
 
 
-.cart__details .btn__group button:first-child:hover {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--grey-color);
-}
 
 .cart__details .btn__group button:last-child {
   border-color: var(--default-color);
@@ -1378,6 +1414,9 @@ h1 {
   align-items: center;
 }
 
+
+
+
 .subdeals{
   font-size: 14px;
 }
@@ -1397,6 +1436,21 @@ h1 {
   margin-left: -2rem;
 }
 
+
+
+/* Cart Icon */
+.cart-icon img {
+  width: 0rem; /* Adjust the size as needed */
+  height: 0rem;
+  
+  
+}
+
+
+/* Blue Icon Color */
+.blue-icon img {
+  color: blue; /* Change to your desired blue color */
+}
 .newsletter__box form button:focus {
   outline: none;
 }
@@ -1418,6 +1472,20 @@ h1 {
   .newsletter__center {
     grid-template-columns: 1fr 1fr;
   }
+  
+/* Cart Icon */
+.cart-icon img {
+  width: 3rem; /* Adjust the size as needed */
+  height: 3rem;
+  transition: color 0.3s; /* Add transition for smooth color change */
+  
+}
+
+
+/* Blue Icon Color */
+.blue-icon img {
+  color: blue; /* Change to your desired blue color */
+}
 
   .newsletter__box form input {
     padding: 1rem 0;
