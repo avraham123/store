@@ -756,32 +756,27 @@ Add to cart
         <div class="blog__center">
           <div class="blog__box">
             <div class="img__cover">
-              <img src="./images/blog1.jpg" alt="" />
+              <a href="https://avraham123.github.io/realportfolio/product.html" target="_blank">
+              <img src="./images/blog1.png" alt="" />
             </div>
-            <div class="box__content">
-              <h2>Here are the trends I see coming this fall</h2>
-              <a href="#">Read more</a>
-            </div>
+            
+              <h2>Visit my portfolio for more projects!</h2>
+            </a>
+           
           </div>
 
           <div class="blog__box">
             <div class="img__cover">
-              <img src="./images/blog2.jpg" alt="" />
+              <a href="https://www.linkedin.com/in/avraham-life/" target="_blank">
+              <img src="./images/blog2.png" alt="" />
             </div>
-            <div class="box__content">
-              <h2>Here are the trends I see coming this fall</h2>
-              <a href="#">Read more</a>
-            </div>
+           
+              <h2>Check out my LinkedIn page!</h2>
+            </a>
+          
           </div>
 
-          <div class="blog__box">
-            <div class="img__cover">
-              <img src="./images/blog3.jpg" alt="" />
-            </div>
-            <div class="box__content">
-              <h2>Here are the trends I see coming this fall</h2>
-              <a href="#">Read more</a>
-            </div>
+         
           </div>
         </div>
       </div>
@@ -1098,9 +1093,55 @@ function closeRegisterForm() {
 }
 </script>
 
+<script>
+
+// Function to check if an element is in the viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to add the "fade-in" class when element is in viewport
+function handleScrollAnimation() {
+  const products = document.querySelectorAll('.product');
+  products.forEach(product => {
+    if (isElementInViewport(product)) {
+      product.classList.add('fade-in');
+    }
+  });
+}
+
+// Attach the scroll event listener
+window.addEventListener('scroll', handleScrollAnimation);
+
+</script>
+
+
+<script>
+
+// JavaScript to toggle "active" class on click
+document.addEventListener("DOMContentLoaded", function () {
+  const blogBoxes = document.querySelectorAll(".blog__box");
+
+  blogBoxes.forEach((blogBox) => {
+    const imgCover = blogBox.querySelector(".img__cover");
+
+    imgCover.addEventListener("click", function () {
+      blogBox.classList.toggle("active");
+    });
+  });
+});
 
 
 
+
+
+</script>
 
   <!-- Glidejs -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
