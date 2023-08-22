@@ -47,10 +47,20 @@ a {
 }
 
 
+.image-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+
 
 img {
   max-width: 100%;
   max-height: 100%;
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
 }
 
 h2,
@@ -100,7 +110,7 @@ h1 {
 .transition-span {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 0.5s;
 }
 
 .transition-span.visible {
@@ -748,7 +758,7 @@ h1 {
   text-align: center;
   opacity: 0; /* Initially invisible */
   transform: translateY(20px); /* Slightly move down */
-  transition: opacity 0.5s ease, transform 1.5s ease; /* Smooth transition */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
 
 }
 
@@ -768,7 +778,14 @@ h1 {
 }
 
 .img__container img {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+
+.img__container img:hover {
+  transition: all 0.2s ease-in-out;
+  
+  
 }
 
 .product:hover .img__container img {
