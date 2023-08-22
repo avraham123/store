@@ -20,7 +20,9 @@
 
 <body>
   
-  
+  <div class="message" id="message">Item has been added to cart!</div>
+
+
   
   <!-- 
         ========================
@@ -868,28 +870,40 @@ Add to cart
   <script>
     // JavaScript to handle form submission and data processing
     document.getElementById("newsletterForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
-      const email = document.getElementById("emailInput").value;
-      // You can add your logic here to process the email subscription (e.g., send to server, store in database, etc.)
-      console.log("Subscribed email:", email);
-      alert("Thank you for subscribing!");
-      document.getElementById("newsletterForm").reset(); // Clear the form after submission
-    });
+  event.preventDefault();
+  const email = document.getElementById("emailInput").value;
+  console.log("Subscribed email:", email);
+  alert("Thank you for subscribing!");
+  this.reset(); // Use 'this' to refer to the form
+});
+
 
      // Send the email to the server using AJAX
      const xhr = new XMLHttpRequest();
-    xhr.open("POST", "subscribe.php", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        const response = JSON.parse(xhr.responseText);
-        alert(response.message); // Display the server response in an alert
-        document.getElementById("newsletterForm").reset(); // Clear the form after submission
-      }
-    };
-    xhr.send("email=" + encodeURIComponent(email));
+xhr.open("POST", "subscribe.php", true);
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    const response = JSON.parse(xhr.responseText);
+    alert(response.message);
+    document.getElementById("newsletterForm").reset();
+  }
+};
+
+document.getElementById("newsletterForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const email = document.getElementById("emailInput").value;
+  xhr.send("email=" + encodeURIComponent(email));
+});
+
+
+
+
   
   </script>
+
+
+
 
 
   <script>
@@ -948,13 +962,8 @@ Add to cart
 
   document.addEventListener("DOMContentLoaded", function () {
   const cartIcon = document.getElementById("cartIcon");
-
-  // Handle click event on cart icon
   cartIcon.addEventListener("click", function () {
-    // Add a class to change the icon color
     cartIcon.classList.add("blue-icon");
-
-    // Remove the class after a delay (1 second)
     setTimeout(function () {
       cartIcon.classList.remove("blue-icon");
     }, 1000);
@@ -1016,14 +1025,14 @@ addToCartButtons.forEach(function (button) {
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-  // Add class "visible" to each span with the class "transition-span" after a delay
   $('.transition-span').each(function(index) {
-    var $span = $(this);
+    const $span = $(this);
     setTimeout(function() {
       $span.addClass('visible');
-    }, (index + 1) * 500); // Adjust the delay as needed (1000ms = 1s)
+    }, (index + 1) * 500);
   });
 });
+
 </script>
 
 
@@ -1031,17 +1040,13 @@ $(document).ready(function() {
 
   <script>
 
-window.addEventListener('scroll', function() {
+wwindow.addEventListener('scroll', function() {
   const content = document.querySelector('.content');
   const offset = content.getBoundingClientRect().top;
 
-  // Change the background to black when scrolling down 100 pixels
-  if (offset < -100) {
-    document.body.classList.add('black-background');
-  } else {
-    document.body.classList.remove('black-background');
-  }
+  document.body.classList.toggle('black-background', offset < -100);
 });
+
 
 </script>
 
@@ -1059,17 +1064,16 @@ window.addEventListener('scroll', function() {
 </script>
 
 <script>
-  const button = document.querySelector('#starry-night')
-  const quantity = document.querySelector('#quantity')
-  quantity.addEventListener('change', () => {
-    // Sets the default quantity when adding the item
-    button.setAttribute('data-item-quantity', quantity.value)
-  })
-  const select = document.querySelector('#frame_color')
-  select.addEventListener('change', () => {
-    // Sets the default frame color when adding the item
-    button.setAttribute("data-item-custom1-value", select.value)
-  })
+ const button = document.querySelector('#starry-night');
+const quantity = document.querySelector('#quantity');
+quantity.addEventListener('change', () => {
+  button.setAttribute('data-item-quantity', quantity.value);
+});
+const select = document.querySelector('#frame_color');
+select.addEventListener('change', () => {
+  button.setAttribute("data-item-custom1-value", select.value);
+});
+
   </script>
 
 <script>
@@ -1137,6 +1141,64 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
+
+
+
+</script>
+
+
+
+
+<script>
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const addToCartButtons = document.querySelectorAll(".snipcart-add-item");
+  const messageBox = document.getElementById("message");
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      messageBox.textContent = "Item has been added to cart!";
+      messageBox.classList.add("show");
+      
+      setTimeout(() => {
+        messageBox.textContent = "";
+        messageBox.classList.remove("show");
+      }, 2000);
+    });
+  });
+});
+
+</script>
+
+
+
+<script>
+
+
+
+
+  // Get the message element
+const message = document.getElementById('message');
+
+// Function to show the message and trigger fade-out animation
+function showMessage() {
+  message.classList.add('show');
+  setTimeout(() => {
+    message.classList.add('fade-out');
+  }, 2000); // Show the message for 2 seconds
+
+  setTimeout(() => {
+    message.classList.remove('show', 'fade-out');
+  }, 3000); // Remove the message after the animation completes
+}
+
+// Example: Call showMessage when the "Add to Cart" button is clicked
+const addToCartButton = document.getElementById('add-to-cart-button');
+addToCartButton.addEventListener('click', showMessage);
 
 
 
