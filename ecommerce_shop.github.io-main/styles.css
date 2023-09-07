@@ -788,6 +788,13 @@ h1 {
   
 }
 
+.home-content-left .button.stroke span[class*="icon"] {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  justify-content: center;
+}
+
 .product:hover .img__container img {
   transform: scale(1.1);
   
